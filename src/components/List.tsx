@@ -9,8 +9,16 @@ interface IProps {
   }[];
 }
 
-const List = (props: IProps) => {
-  return <div>I am a List</div>;
+// DEFINE List as a REACT FUNCTIONAL COMPONENT THAT CONTAINS TYPE OF IProps
+
+const List: React.FC<IProps> = ({ people }) => {
+  return (
+    <>
+      {people.map((person) => {
+        return <>{person.name}</>;
+      })}
+    </>
+  );
 };
 
 export default List;
