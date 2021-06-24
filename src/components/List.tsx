@@ -3,7 +3,7 @@ import React from "react";
 interface IProps {
   people: {
     name: string;
-    url: string;
+    img: string;
     age: number;
     note?: string;
   }[];
@@ -13,11 +13,11 @@ interface IProps {
 
 const List: React.FC<IProps> = ({ people }) => {
   const renderList = (): JSX.Element[] => {
-    return people.map((person) => {
+    return people.map((person, index) => {
       return (
-        <li className="List">
+        <li className="List" key={index}>
           <div className="List-header">
-            <img className="List-img" src={person.url} alt="avatar" />
+            <img className="List-img" src={person.img} alt="avatar" />
             <h2>{person.name}</h2>
           </div>
           <p>{person.age} years old</p>

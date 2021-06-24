@@ -1,5 +1,5 @@
 .App {
-  background-color: #282c34;
+  background-color: #262626;
   color: white;
   display: flex;
   flex-direction: column;
@@ -33,12 +33,43 @@
   width: 6rem;
   height: 6rem;
   /* border-radius: 100%; */
-  margin-right: 0.5rem;
-  object-fit: contain;
   margin-right: 2rem;
+  object-fit: contain;
 }
 
 .List-note {
   width: 30%;
   text-align: left;
+}
+
+.AddToList {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  margin: 5rem auto;
+}
+
+.AddToList-input {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  margin: 0.3rem 0rem;
+  outline: none;
+}
+
+.AddToList-btn {
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: #3178c6;
+  font-weight: 700;
+  color: white;
+  border: none;
+
+  :hover {
+    background-color: #000;
+  }
+}
+
+.AddToList-btn:hover {
+  background-color: #104261;
+  transition: ease 0.5s;
 }
